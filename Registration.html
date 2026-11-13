@@ -5,46 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ISBAT University | Student Registration</title>
   <style>
+    :root {
+      --brand: #0b4f4a;        
+      --brand-dark: #073532;   
+      --accent: #e8a317;       
+      --primary: #0f766e;      
+      --page: #f1f7f5;         
+      --card: #ffffff;
+      --text: #1c2b2a;
+      --muted: #5b6b69;
+      --border: #9fb8b4;
+    }
     body {
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.5;
       margin: 0;
-      color: #222;
-      background: #f8f7f3;
+      color: var(--text);
+      background: var(--page);
     }
     header, footer {
-      background: #2b145d;
+      background: var(--brand);
       color: #ffffff;
       text-align: center;
       padding: 1rem;
     }
     header h1 { margin: 0; font-size: 1.6rem; }
     header p { margin: 0.25rem 0 0; }
-    nav { background: #410d2a; text-align: center; }
+    nav { background: var(--brand-dark); text-align: center; }
     nav a {
       display: inline-block;
       color: #ffffff;
       text-decoration: none;
       padding: 0.75rem 1.25rem;
     }
-    nav a:hover { background: #c8102e; }
+    nav a:hover { background: var(--accent); color: #1c1400; }
     main { padding: 1.5rem 1rem; }
 
     /* Form centred, max 700px wide */
     form {
       max-width: 700px;
       margin: 0 auto;
-      background: #fff;
+      background: var(--card);
       padding: 1rem 1.5rem 1.5rem;
       border-radius: 6px;
+      box-shadow: 0 1px 4px rgba(7, 53, 50, 0.12);
     }
     fieldset {
       padding: 1rem 1.25rem;
-      border: 2px solid #14365d;
+      border: 2px solid var(--primary);
       border-radius: 6px;
       margin: 1.25rem 0;
     }
-    legend { font-weight: bold; color: #14365d; padding: 0 0.5rem; }
+    legend { font-weight: bold; color: var(--brand); padding: 0 0.5rem; }
     .field { margin-bottom: 0.9rem; }
     .field label { display: block; font-weight: bold; margin-bottom: 0.25rem; }
     .inline label { display: inline; font-weight: normal; margin-right: 1rem; }
@@ -52,12 +64,16 @@
     input[type="date"], select {
       width: 100%;
       padding: 0.5rem;
-      border: 1px solid #9ba38a;
+      border: 1px solid var(--border);
       border-radius: 4px;
       font-size: 1rem;
       box-sizing: border-box;
     }
-    .hint { font-size: 0.85rem; color: #555555; }
+    input:focus, select:focus, button:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 1px;
+    }
+    .hint { font-size: 0.85rem; color: var(--muted); }
     button {
       padding: 0.6rem 1.5rem;
       font-size: 1rem;
@@ -65,9 +81,9 @@
       border-radius: 4px;
       cursor: pointer;
       color: #fff;
-      background: #14365d;
+      background: var(--primary);
     }
-    button[type="reset"] { background: #6b7280; }
+    button[type="reset"] { background: #64748b; }
     button:hover { opacity: 0.9; }
   </style>
 </head>
